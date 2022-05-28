@@ -1,732 +1,1531 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<!-- Head tag (contains Google-Analytics、Baidu-Tongji)-->
 <head>
-  <meta charset="utf-8">
+  <!-- Google Analytics -->
   
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-xxxxxx-xx"></script>
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-xxxxxx-xx');
+    </script>
   
-  <title>Annesky</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Annesky">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Annesky">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="Anne">
-<meta name="twitter:card" content="summary">
+
+  <!-- Baidu Tongji -->
   
-    <link rel="alternate" href="/atom.xml" title="Annesky" type="application/atom+xml">
+    <script type="text/javascript">
+      // Originial
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
   
+
+  <!-- Baidu Push -->
   
-    <link rel="shortcut icon" href="/favicon.png">
+    <script>
+      (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();
+    </script>
   
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <meta name="google-site-verification" content="lxDfCplOZbIzjhG34NuQBgu2gdyRlAtMB4utP5AgEBc"/>
+  <meta name="baidu-site-verification" content="PpzM9WxOJU"/>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="It&#39;s an IT blog..."/>
+  <meta name="keyword" content="v-vincen,v-vincen,livemylife,IT  blog,Blog"/>
+  <link rel="shortcut icon" href="/img/avatar/roguerabbit.jpg"/>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async="async" defer="defer" src="https://buttons.github.io/buttons.js"></script>
+
   
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/beantech.min.css"/>
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css"/>
+    <link rel="stylesheet" href="/css/widget.css"/>
+    <link rel="stylesheet" href="/css/rocket.css"/>
+    <link rel="stylesheet" href="/css/signature.css"/>
+    <link rel="stylesheet" href="/css/catalog.css"/>
+    <link rel="stylesheet" href="/css/livemylife.css"/>
+
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
+      <!-- wave start -->
+      <link rel="stylesheet" href="/css/wave.css"/>
+      <!-- wave end -->
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
+    
+      <!-- top start (article top hot config) -->
+      <link rel="stylesheet" href="/css/top.css"/>
+      <!-- top end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/scroll.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+      <!-- viewer start (Picture preview) -->
+      <link rel="stylesheet" href="/css/viewer.min.css"/>
+      <!-- viewer end -->
+    
+
+    
+      <!-- Search start -->
+      <link rel="stylesheet" href="/css/search.css"/>
+      <!-- Search end -->
+    
+
+    
+      <!-- ThemeColor start -->
+      <link rel="stylesheet" href="/css/themecolor.css"/>
+      <!-- ThemeColor end -->
+    
+
+    
+
+    
+      <!-- gitalk start -->
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
+      <link rel="stylesheet" href="/css/gitalk.css"/>
+      <!-- gitalk end -->
+    
   
+
+  <!-- Custom Fonts -->
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+  <!-- Hux change font-awesome CDN to qiniu -->
+  <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Hux Delete, sad but pending in China <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'> <link
+  href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/ css'> -->
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
+
+  <!-- ga & ba script hoook -->
+  <link rel="canonical" href="http://yoursite-url/">
+  <title>
+    
+      Anne自留地
+    
+  </title>
 <meta name="generator" content="Hexo 6.1.0"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Annesky</a>
-      </h1>
-      
+
+<!-- hack iOS CSS :active style -->
+
+	<body ontouchstart="" class="body--light body--dark">
+
+
+		<!-- ThemeColor -->
+		
+		<!-- ThemeColor -->
+<style type="text/css">
+  .body--light {
+    --light-mode: none;
+    --dark-mode: block;
+  }
+  .body--dark {
+    --light-mode: block;
+    --dark-mode: none;
+  }
+  i.mdui-icon.material-icons.light-mode {
+    display: var(--light-mode);
+  }
+  i.mdui-icon.material-icons.dark-mode {
+    display: var(--dark-mode);
+  }
+</style>
+<div class="toggle" onclick="document.body.classList.toggle('body--dark')">
+  <i class="mdui-icon material-icons light-mode"></i>
+  <i class="mdui-icon material-icons dark-mode"></i>
+</div>
+<script>
+  //getCookieValue
+  function getCookieValue(a) {
+    var b = document.cookie.match('(^|[^;]+)\\s*' + a + '\\s*=\\s*([^;]+)');
+    return b
+      ? b.pop()
+      : '';
+  }
+  let themeMode = 'dark';
+  if (getCookieValue('sb-color-mode') && (getCookieValue('sb-color-mode') !== themeMode)) {
+    let dbody = document.body.classList;
+    themeMode === 'dark' ? dbody.remove('body--dark') : dbody.add('body--dark');
+  }
+
+  //setCookieValue
+  var toggleBtn = document.querySelector(".toggle");
+  toggleBtn.addEventListener("click", function () {
+    var e = document.body.classList.contains("body--dark");
+    var cookieString = e
+      ? "dark"
+      : "light";
+    var exp = new Date();
+    exp.setTime(exp.getTime() + 3 * 24 * 60 * 60 * 1000); //3天过期
+    document.cookie = "sb-color-mode=" + cookieString + ";expires=" + exp.toGMTString() + ";path=/";
+  });
+</script>
+
+		
+
+		<!-- Gitter -->
+		
+		<!-- Gitter -->
+<!-- Docs:https://gitter.im/?utm_source=left-menu-logo -->
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'your-community/your-room'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+		
+
+		<!-- Navigation (contains search)-->
+		<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Anne&#39;s Sky</a>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <!-- Known Issue, found by Hux: <nav>'s height woule be hold on by its content. so, when navbar scale out, the <nav> will cover tags. also mask any touch event of tags, unfortunately. -->
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">HOME</a>
+          </li>
+
+          
+
+          
+          <li>
+            <a class="popup-trigger">
+              <span class="search-icon"></span>SEARCH</a>
+          </li>
+          
+
+          <!-- LangSelect -->
+          
+          
+          <!-- LangSelect start -->
+          <!-- LangSelect -->
+<li>
+  <a id="lang-select-label"><i class="fa fa-globe"></i>
+    <span>
+      English
+    </span>
+    <select id="lang-select" data-canonical="index.html">
+      
+      
+      <option value="en"  selected >
+        English
+      </option>
+      
+      <option value="cn" >
+        简体中文
+      </option>
+      
+    </select>
+  </a>
+</li>
+
+          <!-- LangSelect end -->
+          
+          
+        </ul>
+      </div>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container -->
+</nav>
+<!-- progress -->
+<div id="progress">
+  <div class="line" style="width: 0%;"></div>
+</div>
+
+<script>
+  // Drop Bootstarp low-performance Navbar Use customize navbar with high-quality material design animation in high-perf jank-free CSS3 implementation
+  var $body = document.body;
+  var $toggle = document.querySelector('.navbar-toggle');
+  var $navbar = document.querySelector('#huxblog_navbar');
+  var $collapse = document.querySelector('.navbar-collapse');
+
+  $toggle.addEventListener('click', handleMagic)
+
+  function handleMagic(e) {
+    if ($navbar.className.indexOf('in') > 0) {
+      // CLOSE
+      $navbar.className = " ";
+      // wait until animation end.
+      setTimeout(function() {
+        // prevent frequently toggle
+        if ($navbar.className.indexOf('in') < 0) {
+          $collapse.style.height = "0px"
+        }
+      }, 400)
+    } else {
+      // OPEN
+      $collapse.style.height = "auto"
+      $navbar.className += " in";
+    }
+  }
+</script>
+
+
+		<!-- Post Header (contains intro-header、signature、wordcount、busuanzi、waveoverlay) -->
+		<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+
+  <style type="text/css">
+    .body--light {
+      /* intro-header */
+      --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: url('');
+      --intro-header-background-image-url-page: url('/img/header_img/archive_bg2.jpg');
+    }
+    .body--dark {
+      --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+    }
+
+    header.intro-header {
+       /*config*/
+        background-image: var(--intro-header-background-image-url-home);
+        /* background-image: url('/img/header_img/newhome_bg.jpg'); */
+      
+    }
+
+    
+      #signature {/*signature*/
+        background-image: url('/img/signature/vincent-white.png');
+      }
+    
+  </style>
+
+
+
+
+
+<header class="intro-header">
+  <!-- Signature -->
+  <div id="signature">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          
+          <div class="site-heading">
+            <h1>Anne&#39;s Sky</h1>
+            <!--<hr class="small">-->
+            <span class="subheading">我来过，我爱着</span>
+          </div>
+          
+        </div>
       </div>
     </div>
   </div>
+
+  
+  <!-- waveoverlay start -->
+  <div class="preview-overlay">
+    <svg class="preview-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+      </defs>
+      <g class="preview-parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill=var(--gentle-wave1)></use>
+        <use xlink:href="#gentle-wave" x="48" y="3" fill=var(--gentle-wave2)></use>
+        <use xlink:href="#gentle-wave" x="48" y="5" fill=var(--gentle-wave3)></use>
+        <use xlink:href="#gentle-wave" x="48" y="7" fill=var(--gentle-wave)></use>
+      </g>
+    </svg>
+  </div>
+  <!-- waveoverlay end -->
+  
+
 </header>
 
-      <div class="outer">
-        <section id="main">
+
+
+		<!-- Main Content (Post contains
+	Pager、
+	tip、
+	socialshare、
+	gitalk、gitment、disqus-comment、
+	Catalog、
+	Sidebar、
+	Featured-Tags、
+	Friends Blog、
+	anchorjs、
+	) -->
+		<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    
+
+    <!-- USE SIDEBAR -->
+    <!-- Post Container -->
+    <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+
+      <!-- Main Content -->
+
+
+
+<div class="post-preview">
   
-    <article id="post-0516-0522大事记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/22/0516-0522%E5%A4%A7%E4%BA%8B%E8%AE%B0/" class="article-date">
-  <time class="dt-published" datetime="2022-05-22T13:25:22.000Z" itemprop="datePublished">2022-05-22</time>
-</a>
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/0516-0522大事记/">
+    <h2 class="post-title">
+      0516-0522大事记
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      学习部分早起： 6&#x2F;7
+古诗： 2&#x2F;2，以后不再背了
+单词： 5&#x2F;7
+266-268： 1&#x2F;4，以后不再背了，我都记住了
+阅读&#x2F;作文： 2&#x2F;7
+政治65-94完成，马原第五章至第八章完成，马原部分结束
+法理第十一章、第十二章完成
+模拟考一次，英语没模拟，政治只做了马原部分，12。法基70。法综只做了法理部分，21。
+听了两节杜洪波的......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Anne on
+    2022-05-22
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#life" title="life">life</a>
     
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/22/0516-0522%E5%A4%A7%E4%BA%8B%E8%AE%B0/">0516-0522大事记</a>
-    </h1>
   
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/0509-0515大事记/">
+    <h2 class="post-title">
+      0509-0515大事记
+    </h2>
+    <h3 class="post-subtitle">
       
-        <h2 id="学习部分"><a href="#学习部分" class="headerlink" title="学习部分"></a>学习部分</h2><p>早起： 6&#x2F;7</p>
-<p>古诗： 2&#x2F;2，以后不再背了</p>
-<p>单词： 5&#x2F;7</p>
-<p>266-268： 1&#x2F;4，以后不再背了，我都记住了</p>
-<p>阅读&#x2F;作文： 2&#x2F;7</p>
-<p>政治65-94完成，马原第五章至第八章完成，马原部分结束</p>
-<p>法理第十一章、第十二章完成</p>
-<p>模拟考一次，英语没模拟，政治只做了马原部分，12。法基70。法综只做了法理部分，21。</p>
-<p>听了两节杜洪波的法理主观题技巧课</p>
-<p>日均3h6min</p>
-<p>总计周计划完成率124%</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>本周最重要的事就是和优秀、趁、建安一起拍了毕业照。这一周里防疫措施不断收紧，周日和周一相比简直是天翻地覆的变化，幸好幸好趁着大家还算齐，把毕业照拍完了。1127，我们从天南海北聚集到一处屋檐下，拥被夜话，嬉笑怒骂。谢谢你们。</p>
-<p><img src="/image/roommates.jpg" alt="roommates"></p>
-<p>毕业论文已上传图书馆系统，回执单也交了。</p>
-<p>天太热了，太阳伞在家里，只能拿雨伞充数。太热了太晒了，水分蒸发直接晒干。</p>
-<p>核酸7次</p>
-<p>上周日晚上看完了《死亡诗社》，没看懂，有空再看一遍，看完再写观后感。</p>
-<p>第二篇思想汇报也写完了，现在所有党员转正材料都搞定了，只等着开支部大会。</p>
-<p>党日活动一次。</p>
-<p>本周先是不准点外卖，后来又是严格封校除紧急就医外不得外出，再后来家属区静园和校区用铁板挡起来了，再到现在所有食堂只能打包不能堂食、水站暂停送水，很多人直接收拾行李回家。天翻地覆的一周。</p>
+    </h3>
+    <div class="post-content-preview">
+      学习部分早起 6&#x2F;7
+古诗 4&#x2F;7
+单词 2&#x2F;7
+266-268 4&#x2F;7
+作文&#x2F;阅读 4&#x2F;7
+法理第八章、第十章完成，3&#x2F;3
+政治 61-64，1&#x2F;4
+日均 3h
+总计周计划完成率：69%
+其他预备党员考察表完成，转正申请书完成。
+核酸6次。
+给《妇女权益保障法》修改稿提意见了。
+今晚打算看《死亡诗社》。
+...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Anne on
+    2022-05-15
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#life" title="life">life</a>
+    
+  </div>
+  
 
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/《羊道三部曲》读后感/">
+    <h2 class="post-title">
+      《羊道三部曲》读后感
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      《春牧场》《前山夏牧场》《深山夏牧场》最早是因为罗一舟给什么文摘录了一段读《九篇雪》的音频，我就去找了《九篇雪》全书，看完觉得不够劲。听说这才是李娟的代表作，就去借了“羊道三部曲”，《春牧场》《前山夏牧场》《深山夏牧场》。
+《九篇雪》里我就发现，以前做的很多阅读理解是李娟写的，什么裁缝店里煮羊肉，香得墙皮都要掉了；什么裁缝店里养金鱼，清的水红的鱼绿的草，弄得我每次看到家里的鱼都会想起这一段。......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Anne on
+    2022-05-08
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#reading" title="reading">reading</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/0502-0508大事记/">
+    <h2 class="post-title">
+      0502-0508大事记
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      学习部分早起 2&#x2F;7
+古诗 4&#x2F;7
+单词 4&#x2F;7，短语终于背完了
+266-268 3&#x2F;7
+作文&#x2F;阅读 4&#x2F;7
+政治48-60考点，马原第四章完成，马哲部分结束 3&#x2F;3
+法理第七章完成，第八章听了课没背完 2&#x2F;3
+日均2h4min
+总计周计划完成率：73%
+其他核酸6次。封校，出校有严格的审批报备要求，无所谓本来我......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Anne on
+    2022-05-08
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#life" title="life">life</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/为什么是凤凰毛？/">
+    <h2 class="post-title">
+      为什么是凤凰毛？
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      又名：一次插科打诨的记录起因是我因为不想给陌生人展示我的IP所在地，一怒之下注销了微博，但我确实需要一个地方记录我的周计划、发表日记本不在手边时产生的乱七八糟的想法、整理我的读后感等。本想试一试CSDN，但大佬淇哥建议我自己搭一个博客，并倾情提供Lucida、他以及他同学的博客作为优秀作业供参考。
+于是我不自量力，顺着他博客进去逛了一圈，结论只有一个：尔等大佬的博客岂容我等门外汉肖想？
+
+顺......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Anne on
+    2022-05-03
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#thinking" title="thinking">thinking</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/欢天喜地纪念我学会了插入图片/">
+    <h2 class="post-title">
+      欢天喜地纪念我学会了插入图片
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      感谢对床成熟稳重的大佬，只要把&#x2F;\转换个方向，一切迎刃而解。这个故事告诉我们，退一步海阔天空。
+同样感谢教我分辨完整目录和局部目录的大佬，感恩。
+没有你们，我不可能拥有这片sky，不可能摆弄我的两根儿凤凰毛。
+致谢
+下面是教学成果展示时间
+...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Anne on
+    2022-05-03
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#have a try" title="have a try">have a try</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/2022扫文记录/">
+    <h2 class="post-title">
+      2022扫文记录
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      5月8日《在恋综拆cp后爆红了》看到一百多章暂停名字俗不可耐，内容值得一看。单就我看到的内容来说，可以打8分。终于有一个172故意穿厚底靴来碾压男（自称178）的身高的女主了，终于不是“娇小”的女主了，以矮为美的言情审美不就是白瘦幼的延伸吗。女主眼光犀利，思路灵活，想要追求独立事业。除了女主，恋综里其他女嘉宾也都塑造得很立体，有因为“大龄”而希望尽快安稳结婚的女孩，有因为原生家庭拖累而想要找......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Anne on
+    2022-05-02
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#reading" title="reading">reading</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/0425-0501大事记/">
+    <h2 class="post-title">
+      0425-0501大事记
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      学习部分早起 5&#x2F;7
+古诗 7&#x2F;7，全勤
+背单词 6&#x2F;7
+266-268 2&#x2F;7
+作文&#x2F;阅读 2&#x2F;7
+政治25-40，马原第二章、第三章完成，2&#x2F;4
+法理学第六章完成，2&#x2F;5
+论文装订签字完成，已提交。毕业论文全部流程结束。可算，可算，可算走完了这万里长征路。
+日均1h50min
+总计周计划完成率：54%
+其他三......
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Anne on
+    2022-05-01
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#life" title="life">life</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/学插入图片/">
+    <h2 class="post-title">
+      学插入图片
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      
+image&#x2F;blue.jpg
+
+...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Anne on
+    2022-05-01
+  </p>
+  <div class="tags">
+    
+    <a href="/tags/#have a try" title="have a try">have a try</a>
+    
+    <a href="/tags/#test" title="test">test</a>
+    
+  </div>
+  
+
+</div>
+<hr>
+
+<div class="post-preview">
+  
+  <!-- top start (article top hot config) -->
+  
+  <!-- top end -->
+  
+
+  <a href="/undefined/南轩外/">
+    <h2 class="post-title">
+      南轩外
+    </h2>
+    <h3 class="post-subtitle">
+      
+    </h3>
+    <div class="post-content-preview">
+      thanks very much
+谢谢大佬为我撑起一片天
+感恩
+我就试试能不能发表后修改
+...
+    </div>
+  </a>
+  
+  <p class="post-meta" style="margin: 10px 0;">
+    Posted by Anne on
+    2022-04-30
+  </p>
+  <div class="tags">
+    
+  </div>
+  
+
+</div>
+<hr>
+
+
+  <!-- Pager -->
+  <ul class="pager">
+    
+    
+  </ul>
+
+
+      <!-- 如果开启评论功能 -->
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/22/0516-0522%E5%A4%A7%E4%BA%8B%E8%AE%B0/" data-id="cl3hcln9h0000l0u87uj1gxzv" data-title="0516-0522大事记" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/life/" rel="tag">life</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-0509-0515大事记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/15/0509-0515%E5%A4%A7%E4%BA%8B%E8%AE%B0/" class="article-date">
-  <time class="dt-published" datetime="2022-05-15T11:55:41.000Z" itemprop="datePublished">2022-05-15</time>
-</a>
+    <!-- Sidebar Container -->
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
     
-  </div>
-  <div class="article-inner">
+        <!-- Visitors -->
+<h5><a href="/">VISITORS</a></h5>
+
+<div class="widget">
+  <span>
+    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
+  </span>
+  <br />
+  <span>
+    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
+  </span>
+</div>
+
+
+        <hr>
+    
+        <!-- Featured Tags -->
+
+<section>
+  <h5><a href="/tags/">FEATURED TAGS</a></h5>
+  <div class="tags">
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/15/0509-0515%E5%A4%A7%E4%BA%8B%E8%AE%B0/">0509-0515大事记</a>
-    </h1>
-  
-
-      </header>
+    <a href="/tags/#have a try" title="have a try" rel="2">have a try</a>
     
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="学习部分"><a href="#学习部分" class="headerlink" title="学习部分"></a>学习部分</h2><p>早起 6&#x2F;7</p>
-<p>古诗 4&#x2F;7</p>
-<p>单词 2&#x2F;7</p>
-<p>266-268 4&#x2F;7</p>
-<p>作文&#x2F;阅读 4&#x2F;7</p>
-<p>法理第八章、第十章完成，3&#x2F;3</p>
-<p>政治 61-64，1&#x2F;4</p>
-<p>日均 3h</p>
-<p>总计周计划完成率：69%</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>预备党员考察表完成，转正申请书完成。</p>
-<p>核酸6次。</p>
-<p>给《妇女权益保障法》修改稿提意见了。</p>
-<p>今晚打算看《死亡诗社》。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/15/0509-0515%E5%A4%A7%E4%BA%8B%E8%AE%B0/" data-id="cl37917jf0000x0u8851d2agn" data-title="0509-0515大事记" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/life/" rel="tag">life</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-《羊道三部曲》读后感" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/08/%E3%80%8A%E7%BE%8A%E9%81%93%E4%B8%89%E9%83%A8%E6%9B%B2%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/" class="article-date">
-  <time class="dt-published" datetime="2022-05-08T08:12:22.000Z" itemprop="datePublished">2022-05-08</time>
-</a>
+    
+    
+    <a href="/tags/#test" title="test" rel="1">test</a>
+    
+    
+    
+    <a href="/tags/#life" title="life" rel="4">life</a>
+    
+    
+    
+    <a href="/tags/#reading" title="reading" rel="2">reading</a>
+    
+    
+    
+    <a href="/tags/#thinking" title="thinking" rel="1">thinking</a>
+    
     
   </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/08/%E3%80%8A%E7%BE%8A%E9%81%93%E4%B8%89%E9%83%A8%E6%9B%B2%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/">《羊道三部曲》读后感</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="《春牧场》《前山夏牧场》《深山夏牧场》"><a href="#《春牧场》《前山夏牧场》《深山夏牧场》" class="headerlink" title="《春牧场》《前山夏牧场》《深山夏牧场》"></a>《春牧场》《前山夏牧场》《深山夏牧场》</h2><p>最早是因为罗一舟给什么文摘录了一段读《九篇雪》的音频，我就去找了《九篇雪》全书，看完觉得不够劲。听说这才是李娟的代表作，就去借了“羊道三部曲”，《春牧场》《前山夏牧场》《深山夏牧场》。</p>
-<p>《九篇雪》里我就发现，以前做的很多阅读理解是李娟写的，什么裁缝店里煮羊肉，香得墙皮都要掉了；什么裁缝店里养金鱼，清的水红的鱼绿的草，弄得我每次看到家里的鱼都会想起这一段。不过她写新疆生活的文章确实适合当阅读理解，好理解，语言不耍花招但也不寡淡，就像风沙里的红鱼绿草，很适合小孩来分析个一二三，“运用……手法，描述了……，表达了……”。至于那些意识流文章，我没看懂。</p>
-<p>“羊道”全是在牧人家庭里的生活，可是读了个爽，我看啥都新奇。蓝汪汪的天，垂到地面的云，嶙峋的山，绿得让人手足无措的世界，还有狗、羊、牛、骆驼。游牧生活、宏大的自然风光，有这个打底，再平铺直叙的文章都成了好文章。里面描写的亮色也很多，香气四溢的新馕、久无人迹的原始森林、光滑如镜面的巨石、仿佛扎在世界尽头的蒙古包、草原上的红衣女孩、安和富裕的哈萨克家庭……不知道我的哈萨克室友家里有没有羊……</p>
-<p>可能与我读书时心情压抑有关，我在读时，满眼只看到寒冷、孤独、物资匮乏、枯燥单调的日常、对病痛的忍耐、日复一日的劳作、一年几次的长途跋涉、血淋淋的骆驼肚子……人活着就是为了放羊，从婴儿起就随家庭转场。羊长大、几次转场，最后贡献出皮、毛、肉，融入牧民的生活。一代代人过着祖辈一遍遍重复的生活，忍耐饥饿、寒冷和沉重的劳动，牛羊闷声不吭地活着和死去。活着是受苦，一代代一辈辈反反复复受苦，为什么会这样？</p>
-<p>因为这些感触，我和笔友们写信也提了几句，大家回复五花八门，还挺有意思。</p>
-<p>印尼的Diya：</p>
-<blockquote>
-<p>Aahhh yes about that book. In my opinion, life is like sea water. Sometimes it’s high, sometimes it’s low. Life is not always happy and not always suffering. It is better to suffer in the beginning, than suffer at the end. Life is not perfect, rich is not necessarily happy. The poor are not necessarily unhappy. Why do we have to study and work when we will experience death? I think it’s a cycle of life, we learn not only for the world but also for what we will have at the end. We work hard also not for the beginning, in the end we also enjoy at the end. Is not it? I think death is destiny, we can’t fight it nor can we avoid it. Everything on earth is just a pseudo-life, like a mirage. It looks real, but in fact real life is not on earth, but eternal in the afterlife. On earth is just a journey, we walk for a destination we don’t know what the outcome will be. As long as we do good then we will get good too. As the saying goes “What we sow, that’s what we will reap later.” It’s also impossible if we plant fruit that grows vegetables, is that right? ️</p>
-</blockquote>
-<p>巴西的Rita：</p>
-<blockquote>
-<p>Nice! Then tell me what you think of these books. Who’s the writer of that book you mentioned? I can’t find much information on Google. It seems to be a monotonous book, but very interesting. I can’t say that would be my reading style. However, from any form leaving one reality to another generate a great learning. Your question is a little complex to answer. I could simply use philosophical text to curl you up into an answer. But from my personal point of view. I would say “because we need to live”. We all need to go through at least click of life: “To be born, to grow and to reproduce and to die”. Changing this will not allow you to “live easier”. We’ll just be eliminated easier from nature. Although we are rational beings, only the strongest survive. Or in this case, the smartest. That’s all!  </p>
-</blockquote>
-<p>四月的一天，我路过明新大厅，电子屏正在播新疆牧民带着畜群转场的新闻。我们没有任何关联，但因为一本书，我仿佛又与几千里外尘土飞扬的转场路有了那么一丝丝关联。冰冷的群星、负重的骆驼群、匆匆搭成的小棚子、把道路踏起一层尘土的羊群，而我是骑在马上神情冷漠疲惫的牧羊人，这种感觉真奇妙。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/08/%E3%80%8A%E7%BE%8A%E9%81%93%E4%B8%89%E9%83%A8%E6%9B%B2%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/" data-id="cl2x26cpm0000i4u8hpyl015y" data-title="《羊道三部曲》读后感" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reading/" rel="tag">reading</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-0502-0508大事记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/08/0502-0508%E5%A4%A7%E4%BA%8B%E8%AE%B0/" class="article-date">
-  <time class="dt-published" datetime="2022-05-08T07:13:55.000Z" itemprop="datePublished">2022-05-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/08/0502-0508%E5%A4%A7%E4%BA%8B%E8%AE%B0/">0502-0508大事记</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="学习部分"><a href="#学习部分" class="headerlink" title="学习部分"></a>学习部分</h2><p>早起 2&#x2F;7</p>
-<p>古诗 4&#x2F;7</p>
-<p>单词 4&#x2F;7，短语终于背完了</p>
-<p>266-268 3&#x2F;7</p>
-<p>作文&#x2F;阅读 4&#x2F;7</p>
-<p>政治48-60考点，马原第四章完成，马哲部分结束 3&#x2F;3</p>
-<p>法理第七章完成，第八章听了课没背完 2&#x2F;3</p>
-<p>日均2h4min</p>
-<p>总计周计划完成率：73%</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>核酸6次。封校，出校有严格的审批报备要求，无所谓本来我也不出门。</p>
-<p>开始准备党员转正材料，比预备党员时交的材料少很多，而且联系党支书也方便了（意思是，党支书是我室友），希望赶紧搞完，不要跟去年一样那么多岔子。</p>
-<p>终于可以中午洗澡了。</p>
-<p>本周三次去图书馆试图借《厌女》，均无所获，全是“已借出”。有点高兴，这个学校里有人和我一样，我们读一样的书，思考一样的问题，我不是离经叛道的唯一一人，I’m not lonely.但是我都去三次了，三顾茅庐不过如此，姐妹你看完了的话，能早点还书吗？我已经预约了。没借到《厌女》，睡前又想看点啥助眠，借了一本《民国腕儿写民国》散文选、《闲情偶寄》、张晓风系列散文《红毯的那一端》《步下红毯之后》《你还没有爱过》，都不是砖头书。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/08/0502-0508%E5%A4%A7%E4%BA%8B%E8%AE%B0/" data-id="cl2wz7uyg00004cu88u7qemde" data-title="0502-0508大事记" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/life/" rel="tag">life</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-为什么是凤凰毛？" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/03/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E5%87%A4%E5%87%B0%E6%AF%9B%EF%BC%9F/" class="article-date">
-  <time class="dt-published" datetime="2022-05-03T04:10:40.000Z" itemprop="datePublished">2022-05-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/03/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E5%87%A4%E5%87%B0%E6%AF%9B%EF%BC%9F/">为什么是凤凰毛？</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="又名：一次插科打诨的记录"><a href="#又名：一次插科打诨的记录" class="headerlink" title="又名：一次插科打诨的记录"></a>又名：一次插科打诨的记录</h2><p>起因是我因为不想给陌生人展示我的IP所在地，一怒之下注销了微博，但我确实需要一个地方记录我的周计划、发表日记本不在手边时产生的乱七八糟的想法、整理我的读后感等。本想试一试CSDN，但大佬淇哥建议我自己搭一个博客，并倾情提供Lucida、他以及他同学的博客作为优秀作业供参考。</p>
-<p>于是我不自量力，顺着他博客进去逛了一圈，结论只有一个：尔等大佬的博客岂容我等门外汉肖想？</p>
-<blockquote>
-<p>顺着你的那个博客进去，感觉误入另一个世界。你们英语都这么好的吗？感觉都是很高大上足以颠覆生活的东西，然后我要在里面记鸡毛蒜皮的这周做了一次核酸买了俩年糕吃了三次火锅，玷污了它。</p>
-</blockquote>
-<p>Cyanbox：</p>
-<blockquote>
-<p>那倒也没有，只能说一般的记鸡毛蒜皮的人没能力高这么一个博客，你要是搞了说明你比一般的鸡毛蒜皮人高级很多。</p>
-</blockquote>
-<p>我随口秃噜：</p>
-<blockquote>
-<p>上升成凤凰毛了？</p>
-</blockquote>
-<p>凤凰毛可不是那么好当的，期间经历了几次折腾，大佬的劳动力被我无情压榨，最终终于变成了凤凰毛。虽然截至目前为止，我还是不停掉链子，local什么4000那个到现在也记不住，老是忘了npx，markdown也不熟练，还时不时忘了切换中英，加个图片更是需要我的瑞宝出手相救。但是这好歹是我鸟枪换炮的凤凰毛，就冲着前期精力成本投入，我也要好好摆弄这两根凤凰毛。</p>
-<p>突然想起来，小时候看的故事，凤凰身上的毛都掉干净了，于是百鸟拔下自己最美的羽毛，组成凤羽。从这个角度讲，在鸡身上的是鸡毛，换到凤凰身上，就成了凤凰毛。我写的无非是鸡毛蒜皮唠唠叨叨，换个地方，也还是那些唠唠叨叨，不能因为它换了地方，就觉得是有多高价值的东西。</p>
-<p>嗐，敝帚自珍罢了。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/03/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E5%87%A4%E5%87%B0%E6%AF%9B%EF%BC%9F/" data-id="cl2pnilmm0000usu813facx73" data-title="为什么是凤凰毛？" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/thinking/" rel="tag">thinking</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-欢天喜地纪念我学会了插入图片" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/03/%E6%AC%A2%E5%A4%A9%E5%96%9C%E5%9C%B0%E7%BA%AA%E5%BF%B5%E6%88%91%E5%AD%A6%E4%BC%9A%E4%BA%86%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" class="article-date">
-  <time class="dt-published" datetime="2022-05-02T16:04:20.000Z" itemprop="datePublished">2022-05-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/03/%E6%AC%A2%E5%A4%A9%E5%96%9C%E5%9C%B0%E7%BA%AA%E5%BF%B5%E6%88%91%E5%AD%A6%E4%BC%9A%E4%BA%86%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">欢天喜地纪念我学会了插入图片</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>感谢对床成熟稳重的大佬，只要把&#x2F;\转换个方向，一切迎刃而解。这个故事告诉我们，退一步海阔天空。</p>
-<p>同样感谢教我分辨完整目录和局部目录的大佬，感恩。</p>
-<p>没有你们，我不可能拥有这片sky，不可能摆弄我的两根儿凤凰毛。</p>
-<p>致谢</p>
-<h4 id="下面是教学成果展示时间"><a href="#下面是教学成果展示时间" class="headerlink" title="下面是教学成果展示时间"></a>下面是教学成果展示时间</h4><p><img src="/image/red.jpg" alt="red"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/03/%E6%AC%A2%E5%A4%A9%E5%96%9C%E5%9C%B0%E7%BA%AA%E5%BF%B5%E6%88%91%E5%AD%A6%E4%BC%9A%E4%BA%86%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" data-id="cl2oxckdf0000qou8awb132cb" data-title="欢天喜地纪念我学会了插入图片" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/have-a-try/" rel="tag">have a try</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2022扫文记录" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/02/2022%E6%89%AB%E6%96%87%E8%AE%B0%E5%BD%95/" class="article-date">
-  <time class="dt-published" datetime="2022-05-02T11:19:24.000Z" itemprop="datePublished">2022-05-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/02/2022%E6%89%AB%E6%96%87%E8%AE%B0%E5%BD%95/">2022扫文记录</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="5月8日"><a href="#5月8日" class="headerlink" title="5月8日"></a>5月8日</h2><h3 id="《在恋综拆cp后爆红了》看到一百多章暂停"><a href="#《在恋综拆cp后爆红了》看到一百多章暂停" class="headerlink" title="《在恋综拆cp后爆红了》看到一百多章暂停"></a>《在恋综拆cp后爆红了》看到一百多章暂停</h3><p>名字俗不可耐，内容值得一看。单就我看到的内容来说，可以打8分。终于有一个172故意穿厚底靴来碾压男（自称178）的身高的女主了，终于不是“娇小”的女主了，以矮为美的言情审美不就是白瘦幼的延伸吗。女主眼光犀利，思路灵活，想要追求独立事业。除了女主，恋综里其他女嘉宾也都塑造得很立体，有因为“大龄”而希望尽快安稳结婚的女孩，有因为原生家庭拖累而想要找一个“优秀”“能让她仰视”男友的女孩。文中其他女角色也都很出彩，有的勇敢站出来爆料骗色人渣，有的勤勤恳恳乐观面对身体残疾，有的高龄追梦依旧事业有成。</p>
-<p>男嘉宾也很真实，注意，是真实。活脱脱现实遇到的各种普通却自信的男的，油腻腻装出深情实际上批发“你是我的缪斯”的男的，对话里宛如智障却自信双商超高的男的，想要全职太太的男的，完全不在乎女方感受的男的。</p>
-<p>这篇还在情节中安排各种反诈事件，比如想要吃绝户而故意塑造“一见钟情”的傻屌、时间管理大师同时骗多个女孩的傻屌、故意打压女方让她不敢应聘的傻屌……总之是非常真实，值得一看。</p>
-<p>问题出在作者写的男主太好了，专业技能过硬，事事尊重女主，真诚坦率不隐瞒不欺骗，和其他男的很明显割裂，几乎就是理想与现实的差距。可能作者是想说不要因为有大量傻屌而忽略为数不多的正常男人，也可能是想展现一段正常的恋爱关系应该是什么样的，但我看来就是割裂感太重，仿佛一本书里同时并存两个故事。导致我忍不住跳过男主出场的地方，只想看女主帮其他女孩摆脱人渣。</p>
-<p>可能过一阵子我会把它看完吧。</p>
-<h3 id="《全职all你-试试试》看到37章弃"><a href="#《全职all你-试试试》看到37章弃" class="headerlink" title="《全职all你 试试试》看到37章弃"></a>《全职all你 试试试》看到37章弃</h3><p>lofter上的all你，风格也很lofter，轻松小甜文，不要带脑子看，情节不幼稚。比较新颖的点在于女主不是职业选手，而是兴欣网管（有可能以后会成为战队经理），抠门。</p>
-<p>问题出在作者给孙哲平的设定上，设定孙哲平的发言非常没有礼貌而且他的理想型是全职太太，作者在评论区也表示不认为全职太太是不好的事情。因为最初的评论区读者纷纷表示的无礼让人厌烦，作者修改一次，改后的发言稍微尊重了女主一丝丝，理想型没变。</p>
-<p>现实中哪个男的要是对我说希望我当全职太太，我会拉黑告诉所有姐妹避雷此人，整不好还会忍不住匿名发帖狠狠唾弃。借用《在恋综拆cp后爆红了》的一句话，正告所有想让女方当全职太太的男的，“请到劳动市场与保姆签订正式劳务合同”。</p>
-<p>另外，“直男”不是没有礼貌、不讲卫生、不尊重女人的借口。哪有那么多“直男发言”“直男礼物”“直男拍照”，无非就是没把女方当需要尊重的平等的人看，根本不想付出时间精力而已。你看他在领导面前也这么说？你看他给领导送礼也送一箱子“拉菲草”（名这么高大上，不就一堆纸条）？你看他给领导照相也拍得人体扭曲？别给男的找借口。</p>
-<h2 id="4月24日"><a href="#4月24日" class="headerlink" title="4月24日"></a>4月24日</h2><h3 id="《恶女只好登基》7-5分"><a href="#《恶女只好登基》7-5分" class="headerlink" title="《恶女只好登基》7.5分"></a>《恶女只好登基》7.5分</h3><p>这本书断断续续拖了得有两三年吧，我刚开始看的时候女性意识还没觉醒，觉得女主真是太厉害了，现在反过来看看，其实也没有当时那么惊艳。</p>
-<p>我第一次看星际机甲文，作者建构的世界还是不错的，比较完整，逻辑也能自洽。女主很聪明，武力值很高，慢慢学会利用人与人之间的矛盾达到自己目的。文笔也还行，情节也算是一波三折。一众配角也算比较丰满，文中对女主哥哥的一系列恋爱脑行为也做了不错的讽刺。人鱼不想当公主的变性行为也可以给没有觉醒的人一点启发。</p>
-<p>缺点在于结尾过快，个人认为逃出水晶海之后剧情仿佛被三倍速快进，有点烂尾嫌疑。结尾我也不喜欢，太大团圆了，我个人认为女主哥哥的结局过于圆满。另外，如果这篇能再来个一百万字，仔细写写配角们的故事，会更好。</p>
-<p>评论区一直在嗑cp猜男主，而这本书连载的期间，我经历了从一起嗑到讨厌爱情的转变。蛮感慨的。</p>
-<h3 id="《别爱我，没结果》看到第137章弃"><a href="#《别爱我，没结果》看到第137章弃" class="headerlink" title="《别爱我，没结果》看到第137章弃"></a>《别爱我，没结果》看到第137章弃</h3><p>拖太久了，这本书应该是19年开始写的，到现在都没完结，作者有卡v嫌疑，几个月更新一次。看这本时也是女性意识没觉醒，觉得女主好飒好强，现在看看也没有当时自己认为的那么强，有烂黄瓜股，有一点雌竞情节。</p>
-<p>文笔确实好，作者对于民国、奢侈品之类的知识看出来是扎实的。情节也好，一波三折。有几个配角也不错，当时非常上头。</p>
-<p>但是几个月更新一次实在是受不了，我记不住前面剧情了，感觉作者没啥诚意，遂弃文。也许过个十年八年，它完结了，我会再看看。</p>
-<h2 id="4月10日"><a href="#4月10日" class="headerlink" title="4月10日"></a>4月10日</h2><h3 id="《女皇纪事》9分"><a href="#《女皇纪事》9分" class="headerlink" title="《女皇纪事》9分"></a>《女皇纪事》9分</h3><p>以叶卡捷琳娜二世为主角，带一点穿越。叙事宏伟瑰丽，描写18世纪欧洲肮脏腐败的贵族，蛆虫、香粉和老鼠的集合体。作者笔力不多，寥寥几笔就能写出一个独立角色的命运。我非常喜欢女主展现出来的理智和敏锐，“我首先是一位君王，其次才是女人”“我不会因为任何男人背弃理性”。还有有关科技和军事方面，绝对实力的碾压真是看得人心神激荡。权力，谁能拒绝权力呢？为了权力，没有什么是不可以放弃的。</p>
-<p>美中不足就是受限于故事背景，女性角色还是稍微少了一点，一些女性角色也是目光短浅沦为牺牲品（比如英国黑森公主）。不过几个有见识的女人的不同命运还是写得很精彩，自欺欺人、无情了一辈子的白女皇，处理政务只是为讨路易十五欢心（多么好的反面例子）的蓬皮杜夫人，承担责任反而被家族抛弃的安吉利亚。</p>
-<p>可以视为《凤穿残汉》俄罗斯版</p>
-<h2 id="3月27日"><a href="#3月27日" class="headerlink" title="3月27日"></a>3月27日</h2><h3 id="《-是恋爱达人就闯100关小游戏》看到第40章弃"><a href="#《-是恋爱达人就闯100关小游戏》看到第40章弃" class="headerlink" title="《 是恋爱达人就闯100关小游戏》看到第40章弃"></a>《 是恋爱达人就闯100关小游戏》看到第40章弃</h3><p>挺可爱的小文，酸酸甜甜又灵动，现实和游戏交织，女主性格可爱，男主们也很有青春气息，头几天非常喜欢。但问题在于对女主室友的描写，明明室友没干啥错事，就是正常的平淡同学，作者字里行间对她们的不友好不认同感却很重。还有对其中一个单元的女配描写，没明说但我觉得作者心里想的就是雌竞。另外就是女主一些服美役行为，约会要化妆，化妆要让男友看了觉得好，这让我很不舒服。</p>
-<h3 id="《-全职-攻略模组》看到二十几章弃"><a href="#《-全职-攻略模组》看到二十几章弃" class="headerlink" title="《[全职]攻略模组》看到二十几章弃"></a>《[全职]攻略模组》看到二十几章弃</h3><p>我第一次看“安科文”，就是说，故事走向由作者掷骰子决定。感觉很新鲜，但是我不明白作者到底在什么时候掷骰子，什么时候自己写。把故事完全交给偶然，这就让情节和人物变得匪夷所思。</p>
-<h2 id="3月10日"><a href="#3月10日" class="headerlink" title="3月10日"></a>3月10日</h2><h3 id="《每个世界苏一遍》看到第7章弃"><a href="#《每个世界苏一遍》看到第7章弃" class="headerlink" title="《每个世界苏一遍》看到第7章弃"></a>《每个世界苏一遍》看到第7章弃</h3><p>没啥可说的，雌竞味儿太浓。女主女配扯头花很大一部分原因是为了男人。行文中对女性不友好的细节蛮多的，比如很少正面立体的女角色，一些厌女口癖。还有借女主之口为金主包养 潜规则洗白，说这是正常人会选择的easy模式。以及女主大学时出轨是为了给当时的男友争资源。</p>
-<h3 id="《攻略游戏成真了》7-5分"><a href="#《攻略游戏成真了》7-5分" class="headerlink" title="《攻略游戏成真了》7.5分"></a>《攻略游戏成真了》7.5分</h3><p>全职高手同人。实时追的连载终于完结了，更新量大且稳定。</p>
-<p>字数很多，比赛战斗场面占了一半，言之有物，对地图的想象非常丰富，我很喜欢。感情线也有趣，但似乎我不是为了看感情线，主要是想看开了啥新地图……</p>
-<p>文笔有，按理说这么长篇的剧情无论如何也该吸住我，但实际上没有，就感觉一切都太顺利了，太顺利了，无论是事业还是感情，都是一帆风顺，没有拉拉扯扯。文似看山不喜平啊。</p>
-<h2 id="2月8日"><a href="#2月8日" class="headerlink" title="2月8日"></a>2月8日</h2><h3 id="《升官发财死后宫》看到第58章暂停"><a href="#《升官发财死后宫》看到第58章暂停" class="headerlink" title="《升官发财死后宫》看到第58章暂停"></a>《升官发财死后宫》看到第58章暂停</h3><p>四年前的小说。升官发财死后宫，居然还有这等好事。</p>
-<p>优点是女主很清醒，升官发财最重要，恋爱也重要就是得往后稍稍。背景是有少量女官但还不是完全女男平等，一直有阻力。我觉得这个背景也蛮不错</p>
-<p>女配成长线很明确(我是看的剧透)，作者一些议论性文笔也不错。目前出场的四个男的都人设相当好，陈望死了我还好惋惜，王师啥咬断女主头发的情节蛮有张力。就是一连7个be，女主还都是多少动了感情的，我跟着女主遗憾 挺难受。幸好看剧透有六个是假死，好像真死的那个人设最好，我还没看到。缓几天再看</p>
-<p>缺点就是感情写得忒小白，完全就是“作者让他俩看对眼”的安排。另外太子的人设有点矛盾(也可能是我没看完？)。一直强调“嫁出去”让我不大舒服。再就是女主置之死地而后生的被动技能触发此时有点多 我看着有点疲劳。</p>
-<h2 id="2月5日"><a href="#2月5日" class="headerlink" title="2月5日"></a>2月5日</h2><h3 id="《我为什么总是弄错攻略对象》看了十几章弃"><a href="#《我为什么总是弄错攻略对象》看了十几章弃" class="headerlink" title="《我为什么总是弄错攻略对象》看了十几章弃"></a>《我为什么总是弄错攻略对象》看了十几章弃</h3><p>周目文，文笔也还行，其实蛮难得的。问题出在女主爸非婚生子(女主哥)的问题上。她爹和前女友谈恋爱期间，对相亲对象女主妈一见钟情，遂分手结婚生了女主。前女友怀孕，自己一个人生下孩子，16年后去世，女主哥被送到福利院，福利院找到女主爸，哥才知道自己爹是谁，她爸才知道自己有个非婚生子。女主妈作主把哥认回来了。女主对前女友表达了谴责，对爸不知情表示理解和宽容。</p>
-<p>里面一个娇蛮大小姐也塑造得不大成功，只有蛮没有娇，看着让人讨厌，妥妥恶毒女配</p>
-<h2 id="2月4日"><a href="#2月4日" class="headerlink" title="2月4日"></a>2月4日</h2><h3 id="《白月光她卷土重来》-还在连载-看完第一个世界弃"><a href="#《白月光她卷土重来》-还在连载-看完第一个世界弃" class="headerlink" title="《白月光她卷土重来》(还在连载)看完第一个世界弃"></a>《白月光她卷土重来》(还在连载)看完第一个世界弃</h3><p>女主被别人穿越上身6年后重新找会自己身体，但6年里荒废的人生难以补救。我喜欢这个梗，但作者把女主写得太淡定了，看不到悲哀愤怒只有一点点遗憾，像个假人，我都要被气死了女主还一脸愧疚，剧情也有点莫名其妙。</p>
-<h3 id="《师妹她真不是海王》-还在连载-看完第三个世界暂停"><a href="#《师妹她真不是海王》-还在连载-看完第三个世界暂停" class="headerlink" title="《师妹她真不是海王》(还在连载)看完第三个世界暂停"></a>《师妹她真不是海王》(还在连载)看完第三个世界暂停</h3><p>喜欢平和坚定有主见的女主，几个男的女的也都很出彩，节奏很紧凑，第一个世界真的很精彩。劝退点是看评论区说作者卡V，后面小世界太多了西幻现代都出来了，而且女主迟迟不能和师父师兄见面，感觉故意拖节奏，有烂尾嫌疑。我再等等看完结之后吧</p>
-<h2 id="1月31日"><a href="#1月31日" class="headerlink" title="1月31日"></a>1月31日</h2><h3 id="《带着作弊码穿游戏》9分"><a href="#《带着作弊码穿游戏》9分" class="headerlink" title="《带着作弊码穿游戏》9分"></a>《带着作弊码穿游戏》9分</h3><p>本来不喜欢看武侠，但这篇给我打开了新大门。叙事节奏快，不拖沓。作者在主角和其他大佬之间的平衡做的很好，既没有让主角一开始就强到碾压，始终是人外有人，但又让我确实感受到主角的强。一路升级感觉也很快乐。最棒的是作者自然地让一个角色默认为女，让我觉得她很强，而且这种强与性别无关。我反思，我看到个角色就默认为男，很不好。</p>
-<p>缺点是确实有一阵子感觉我读疲软了，像肝游戏一样只想抓紧完成任务。</p>
-<h2 id="1月11日"><a href="#1月11日" class="headerlink" title="1月11日"></a>1月11日</h2><h3 id="《求求你了！我们这是个恋爱游戏》看到十几章弃"><a href="#《求求你了！我们这是个恋爱游戏》看到十几章弃" class="headerlink" title="《求求你了！我们这是个恋爱游戏》看到十几章弃"></a>《求求你了！我们这是个恋爱游戏》看到十几章弃</h3><p>脑洞不错，最近沉迷星露谷，看到感觉很亲切。</p>
-<p>但是目前出现的两组男配，一组试图抢劫女主，被作者评价为“吃了点亏的老实人”，一组是颐指气使的富二代，被洗成女主迷弟搞笑担当。反而是一位女配，说了几句茶言茶语想占便宜未遂，被作者写得极其恶毒。看不下去了。</p>
-<h2 id="1月10日"><a href="#1月10日" class="headerlink" title="1月10日"></a>1月10日</h2><h3 id="《纸片人都对我意图不轨》7分"><a href="#《纸片人都对我意图不轨》7分" class="headerlink" title="《纸片人都对我意图不轨》7分"></a>《纸片人都对我意图不轨》7分</h3><p>秋水麋鹿的叙事是很高效的，剧情节奏也快，几章就是一个大发展，夸夸夸。这篇里面几个男主都是各种悲惨，等了几千年可怜巴巴等着女主眷顾，代入一下我养的纸片人，确实有点戳我软肋。</p>
-<p>沾水散发桃子味就会被认出来这个设定有意思，但我不大喜欢，希望能换一种掉马甲方式。</p>
-<p>这种穿越修罗场文的缺点很明显，除了主角团，配角非常工具，女角色也很少。</p>
-<p>本书另一个毛病在于女主人设在盘出现后有点不大稳，有时候过于重情重义，和前面冷心坚定的人设冲突。我觉得盘出现后的一系列都是败笔，看到盘出现就可以停下来了。</p>
-<h2 id="1月8日"><a href="#1月8日" class="headerlink" title="1月8日"></a>1月8日</h2><h3 id="《be之后，我穿越了》6分"><a href="#《be之后，我穿越了》6分" class="headerlink" title="《be之后，我穿越了》6分"></a>《be之后，我穿越了》6分</h3><p>作者脑洞不错，我欣赏作者对插叙的运用，女主坚定信念一门心思回家也不错。</p>
-<p>但是男主们都是因为女主好看所以喜欢，对女主的形象刻画有些单薄无力，太强调美美美了，只是男主们展现爱意的工具。</p>
-<p>几个男主，太子不说了，拘禁伤害恐吓。丞相也是明里暗里监视，将军好歹青梅竹马但也有强迫情节，侠客反而是比较尊重女主的。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/02/2022%E6%89%AB%E6%96%87%E8%AE%B0%E5%BD%95/" data-id="cl2omwq0400002wu80nzuc8hi" data-title="2022扫文记录" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reading/" rel="tag">reading</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-0425-0501大事记" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/01/0425-0501%E5%A4%A7%E4%BA%8B%E8%AE%B0/" class="article-date">
-  <time class="dt-published" datetime="2022-05-01T12:43:25.000Z" itemprop="datePublished">2022-05-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/01/0425-0501%E5%A4%A7%E4%BA%8B%E8%AE%B0/">0425-0501大事记</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="学习部分"><a href="#学习部分" class="headerlink" title="学习部分"></a>学习部分</h2><p>早起 5&#x2F;7</p>
-<p>古诗 7&#x2F;7，全勤</p>
-<p>背单词 6&#x2F;7</p>
-<p>266-268 2&#x2F;7</p>
-<p>作文&#x2F;阅读 2&#x2F;7</p>
-<p>政治25-40，马原第二章、第三章完成，2&#x2F;4</p>
-<p>法理学第六章完成，2&#x2F;5</p>
-<p>论文装订签字完成，已提交。毕业论文全部流程结束。可算，可算，可算走完了这万里长征路。</p>
-<p>日均1h50min</p>
-<p>总计周计划完成率：54%</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>三次突然核酸</p>
-<p>两次出校囤必需品</p>
-<p>为学校重要活动禁足一上午，并提交200字新闻联播观后感</p>
-<p>周中气温大降，前一天艳阳高照23℃，后一天阴雨霏霏跌至8℃。</p>
-<p>本周最重要的成就就是彻底退出微博，跟着大佬学着用这个博客。我在此中主要贡献就是注册了帐号（甚至科学上网也是大佬教的），以及重复一些愚蠢的错误，反复复制粘贴截图，并等待下一步指令。</p>
-<p>再次诚挚感谢大佬，好人一生平安。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/01/0425-0501%E5%A4%A7%E4%BA%8B%E8%AE%B0/" data-id="cl2nbw1li0000p0u8g49hhw1y" data-title="0425-0501大事记" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/life/" rel="tag">life</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-学插入图片" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/05/01/%E5%AD%A6%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" class="article-date">
-  <time class="dt-published" datetime="2022-05-01T09:01:49.000Z" itemprop="datePublished">2022-05-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/05/01/%E5%AD%A6%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">学插入图片</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p><img src="/image/blue.jpg" alt="blue"></p>
-<p>image&#x2F;blue.jpg</p>
-<p><img src="D:\Github\AnneSite\source\image\blue.jpg" alt="blue"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/05/01/%E5%AD%A6%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" data-id="cl2n2jr890000gou884887pg8" data-title="学插入图片" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/have-a-try/" rel="tag">have a try</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/test/" rel="tag">test</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-南轩外" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/04/30/%E5%8D%97%E8%BD%A9%E5%A4%96/" class="article-date">
-  <time class="dt-published" datetime="2022-04-30T13:00:05.000Z" itemprop="datePublished">2022-04-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/04/30/%E5%8D%97%E8%BD%A9%E5%A4%96/">南轩外</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>thanks very much</p>
-<p>谢谢大佬为我撑起一片天</p>
-<p>感恩</p>
-<p>我就试试能不能发表后修改</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/04/30/%E5%8D%97%E8%BD%A9%E5%A4%96/" data-id="cl2lvl5mo0000l0u89u5oen7e" data-title="南轩外" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
 </section>
-        
-          <aside id="sidebar">
-  
+
+
+        <hr>
+    
+        <!-- Short About -->
+<section class="visible-md visible-lg">
+  <h5><a href="/about/">ABOUT ME</a></h5>
+  <div class="short-about">
+
+    
+    <img id="avatar_pic" src="/img/avatar/fatpeople.jpg" alt="avatar_pic" style="box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, .5);" />
     
 
-  
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/have-a-try/" rel="tag">have a try</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/" rel="tag">life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reading/" rel="tag">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinking/" rel="tag">thinking</a></li></ul>
-    </div>
-  </div>
-
-
-  
+    <p>Fat people have no future, either thin or die...</p>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/have-a-try/" style="font-size: 15px;">have a try</a> <a href="/tags/life/" style="font-size: 20px;">life</a> <a href="/tags/reading/" style="font-size: 15px;">reading</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/thinking/" style="font-size: 10px;">thinking</a>
-    </div>
-  </div>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/05/22/0516-0522%E5%A4%A7%E4%BA%8B%E8%AE%B0/">0516-0522大事记</a>
-          </li>
-        
-          <li>
-            <a href="/2022/05/15/0509-0515%E5%A4%A7%E4%BA%8B%E8%AE%B0/">0509-0515大事记</a>
-          </li>
-        
-          <li>
-            <a href="/2022/05/08/%E3%80%8A%E7%BE%8A%E9%81%93%E4%B8%89%E9%83%A8%E6%9B%B2%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/">《羊道三部曲》读后感</a>
-          </li>
-        
-          <li>
-            <a href="/2022/05/08/0502-0508%E5%A4%A7%E4%BA%8B%E8%AE%B0/">0502-0508大事记</a>
-          </li>
-        
-          <li>
-            <a href="/2022/05/03/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E5%87%A4%E5%87%B0%E6%AF%9B%EF%BC%9F/">为什么是凤凰毛？</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
+    <!-- SNS Link -->
+    <ul class="list-inline">
       
-      &copy; 2022 Anne<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+
+      
+      <li>
+        <a target="_blank" href="https://github.com/V-Vincen">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </li>
+      
+
+      
+      <li>
+        <a target="_blank" href="https://twitter.com/V_Vincen_">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </li>
+      
+
+      
+      <li>
+        <a target="_blank" href="https://www.instagram.com/v_vincen_">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </li>
+      
+
+      
+
+      
+
+      
+
+      
+      <li>
+        <a target="_blank" href="http://weibo.com/WVincen">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </li>
+      
+
+    </ul>
+  </div>
+</section>
+
+        <hr>
+    
+        <!-- RECENT POSTS -->
+
+<h5><a href="/">RECENT POSTS</a></h5>
+<div class="widget">
+  <ul>
+    
+    <a href="undefined/0516-0522%E5%A4%A7%E4%BA%8B%E8%AE%B0/">
+      <li>0516-0522大事记</li>
+    </a>
+    
+    <a href="undefined/0509-0515%E5%A4%A7%E4%BA%8B%E8%AE%B0/">
+      <li>0509-0515大事记</li>
+    </a>
+    
+    <a href="undefined/%E3%80%8A%E7%BE%8A%E9%81%93%E4%B8%89%E9%83%A8%E6%9B%B2%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/">
+      <li>《羊道三部曲》读后感</li>
+    </a>
+    
+    <a href="undefined/0502-0508%E5%A4%A7%E4%BA%8B%E8%AE%B0/">
+      <li>0502-0508大事记</li>
+    </a>
+    
+    <a href="undefined/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E5%87%A4%E5%87%B0%E6%AF%9B%EF%BC%9F/">
+      <li>为什么是凤凰毛？</li>
+    </a>
+    
+  </ul>
+</div>
+
+
+        <hr>
+    
+        <!-- Friends Blog -->
+
+<h5><a href="/">FRIENDS</a></h5>
+<ul class="list-inline">
+  
+  <li><a href="https://v-vincen.life/" target="_blank">V_Vincen</a></li>
+  
+  <li><a href="http://beantech.org" target="_blank">Bean Tech</a></li>
+  
+  <li><a href="http://huangxuan.me" target="_blank">Hux Blog</a></li>
+  
+  <li><a href="https://hexo.io/" target="_blank">Hexo</a></li>
+  
+</ul>
+
+
+        <hr>
+    
+        <!-- Archives -->
+
+<h5><a href="/archives/">archives</a></h5>
+<div class="widget">
+  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/05/">May 2022</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="archives/2022/04/">April 2022</a><span class="archive-list-count">1</span></li></ul>
+</div>
+
+
+        <hr>
+    
+        <!-- Categories -->
+
+
+        <hr>
+    
+</div>
+
+
+    
+  </div>
+</div>
+
+
+		<!-- Footer (contains ThemeColor、viewer) -->
+		<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center">
+          
+
+          
+            <li>
+              <a target="_blank" href="https://github.com/V-Vincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://twitter.com/V_Vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+            <li>
+              <a target="_blank" href="https://www.instagram.com/v_vincen_">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+          
+
+          
+
+          
+
+          
+            <li>
+              <a target="_blank" href="http://weibo.com/WVincen">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          
+
+        </ul>
+        <p class="copyright text-muted">
+          Copyright &copy;
+          Anne
+          2022
+          <br>
+          Theme by
+          <a target="_blank" rel="noopener" href="http://beantech.org">BeanTech</a>
+          <span style="display: inline-block; margin: 0 5px;">
+            <i class="fa fa-heart"></i>
+          </span>
+          re-Ported by
+          <a target="_blank" rel="noopener" href="https://v-vincen.life/">Live My Life</a>
+          |
+          <iframe style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0" width="91px" height="20px" src="https://ghbtns.com/github-btn.html?user=V-Vincen&repo=V-Vincen.github.io&type=star&count=true"></iframe>
+        </p>
+      </div>
     </div>
   </div>
 </footer>
 
+<a id="rocket" href="#top" class=""></a>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Custom Theme JavaScript -->
+  <script type="text/javascript" src="/js/hux-blog.min.js"></script>
+  <!-- catalog -->
+  <script async="true" type="text/javascript" src="/js/catalog.js"></script>
+  <!-- totop(rocket) -->
+  <script async="true" type="text/javascript" src="/js/totop.js"></script>
+
+  
+    <!-- Busuanzi JavaScript -->
+    <script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <!-- Scroll start -->
+    <script async="async" type="text/javascript" src="/js/scroll.js"></script>
+    <!-- Scroll end -->
+  
+
+  
+    <!-- LangSelect start -->
+    <script type="text/javascript" src="/js/langselect.js"></script>
+    <!-- LangSelect end -->
+  
+
+  
+
+  
+    <!-- ribbon -->
+    <script type="text/javascript" src="/js/ribbonDynamic.js"></script>
+  
+
+  
+
+
+
+
+
+
+  <!-- viewer start -->
+  <!-- viewer start (Picture preview) -->
+  
+    <script async="async" type="text/javascript" src="/js/viewer/viewer.min.js"></script>
+    <script async="async" type="text/javascript" src="/js/viewer/pic-viewer.js"></script>
+  
+
+  <!-- viewer end -->
+
+
+<script>
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function (e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  }
+
+  // fastClick.js
+  async ("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+    var $nav = document.querySelector("nav");
+    if ($nav)
+      FastClick.attach($nav);
+    }
+  )
+</script>
+
+<!-- Because of the native support for backtick-style fenced code blocks right within the Markdown is landed in Github Pages, From V1.6, There is no need for Highlight.js, so Huxblog drops it officially. -
+https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0 - https://help.github.com/articles/creating-and-highlighting-code-blocks/ -->
+<!-- <script> async ("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function () { hljs.initHighlightingOnLoad(); }) </script> <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet"> -->
+
+<!-- jquery.tagcloud.js -->
+<!-- <script> // only load tagcloud.js in tag.html if ($('#tag_cloud').length !== 0) { async ("http://yoursite-url/js/jquery.tagcloud.js", function () { $.fn.tagcloud.defaults = { // size: { start: 1, end: 1, unit: 'em' }, color: {
+start: '#bbbbee', end: '#0085a1' } }; $('#tag_cloud a').tagcloud(); }) } </script> -->
+
+
+		<!-- Search -->
+		
+		<div class="popup search-popup local-search-popup">
+  <span class="popup-btn-close">
+    ESC
+  </span>
+  <div class="container">
+    <div class="row">
+      <!-- <div class="col-md-9 col-md-offset-1"> -->
+      <div class="col-lg-9 col-lg-offset-1 col-md-10 col-md-offset-1 local-search-content">
+
+        <div class="local-search-header clearfix">
+
+          <div class="local-search-input-wrapper">
+            <span class="search-icon">
+              <i class="fa fa-search fa-lg" style="margin: 25px 10px 25px 20px;"></i>
+            </span>
+            <input autocomplete="off" placeholder="SEARCH..." type="text" id="local-search-input">
+          </div>
+        </div>
+        <div id="local-search-result"></div>
+      </div>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
   </div>
-</body>
+</div>
+
+
+  
+    <script src="/js/ziploader.js"></script>
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+    // get search zip version
+    $.get('/searchVersion.json?t=' + (+new Date()), function (res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson() {
+      initLoad(['/search.flv'], {
+        loadOptions: {
+          success: function (obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function (e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions: {
+          'json': 'application/json'
+        }
+      })
+    }
+    // search function;
+    var searchFunc = function (search_id, content_id) {
+      'use strict';
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      // console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function () {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function (data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title
+              ? data.title.trim()
+              : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content
+              ? data.content.trim().replace(/<[^>]+>/g, "")
+              : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+
+            var date = data.date;
+            var dateTime = date.replace(/T/, " ").replace(/.000Z/, "");
+            var imgUrl = data.header_img;
+            
+
+
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function (keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0,
+                  position = [],
+                  index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+            // show search results
+            if (isMatch) {
+              // sort index by position of keyword
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+              // merge hits into slices
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+                  // move to next position of hit
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {hits: hits, start: start, end: end, searchTextCount: searchTextCountInSlice};
+              }
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if (start < 0) {
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if (end > content.length) {
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+              // sort slices in content by search text's count and hits' count
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+              // select top N slices in content
+              var upperBound = parseInt('1');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+              // highlight title and content
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+              var resultItem = '';
+
+              // if (slicesOfTitle.length != 0) {   resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>"; } else {   resultItem += "<li><a target='_blank' href='" +
+              // articleUrl + "' class='search-result-title'>" + title + "</a>"; } slicesOfContent.forEach(function (slice) {   resultItem += "<a target='_blank' href='" + articleUrl + "'><p class=\"search-result\">" + highlightKeyword(content, slice) +
+              // "...</p></a>"; }); resultItem += "</li>";
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              } else {
+                resultItem += "<a target='_blank' href='" + articleUrl + "' class='search-result'><div class='search-result-left'><div class='search-result-title'>" + title + "</div><time class='search-result-date'>" + dateTime + "</time>";
+              }
+              slicesOfContent.forEach(function (slice) {
+                resultItem += "<p class=\"search-result-content\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+              resultItem += "</div><div class='search-result-right'><img class='media-image' src='" + imgUrl + "' width='64px' height='48px'></img></div></a>";
+
+              resultItems.push({item: resultItem, searchTextCount: searchTextCount, hitCount: hitCount, id: resultItems.length});
+            }
+          })
+        };
+
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"></div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<div class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</div>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+      // remove loading animation
+      $('body').css('overflow', '');
+      proceedsearch();
+    }
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function (e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function (e) {
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 && $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      var _con = document.querySelector(".local-search-content");
+      if (_con) {
+        if (!_con.contains(e.target)) {
+          onPopupClose();
+        }
+      }
+    });
+  </script>
+
+
+		
+	</body>
 </html>
