@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite-url/%E6%9C%AA%E5%91%BD%E5%90%8D-2/</loc>
+    
+    <lastmod>2022-06-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/0529-0605%E5%A4%A7%E4%BA%8B%E8%AE%B0/</loc>
+    
+    <lastmod>2022-06-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/%E6%9C%AA%E5%91%BD%E5%90%8D-1/</loc>
+    
+    <lastmod>2022-06-05</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite-url/%E6%9C%AA%E5%91%BD%E5%90%8D/</loc>
+    
+    <lastmod>2022-06-05</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite-url/%E6%8D%A2%E4%BA%86%E4%B8%BB%E9%A2%98/</loc>
     
     <lastmod>2022-05-28</lastmod>
@@ -88,7 +116,7 @@
 
   <url>
     <loc>http://yoursite-url/</loc>
-    <lastmod>2022-05-28</lastmod>
+    <lastmod>2022-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -96,35 +124,35 @@
   
   <url>
     <loc>http://yoursite-url/tags/have-a-try/</loc>
-    <lastmod>2022-05-28</lastmod>
+    <lastmod>2022-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/test/</loc>
-    <lastmod>2022-05-28</lastmod>
+    <lastmod>2022-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/life/</loc>
-    <lastmod>2022-05-28</lastmod>
+    <lastmod>2022-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/reading/</loc>
-    <lastmod>2022-05-28</lastmod>
+    <lastmod>2022-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/thinking/</loc>
-    <lastmod>2022-05-28</lastmod>
+    <lastmod>2022-06-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
