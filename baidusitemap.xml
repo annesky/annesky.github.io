@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite-url/0801-0807%E5%A4%A7%E4%BA%8B%E8%AE%B0/</loc>
+    <lastmod>2022-08-07</lastmod>
+  </url>
+  <url>
     <loc>http://yoursite-url/0725-0731%E5%A4%A7%E4%BA%8B%E8%AE%B0/</loc>
     <lastmod>2022-07-31</lastmod>
   </url>
