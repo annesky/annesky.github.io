@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite-url/0109-0115%E5%A4%A7%E4%BA%8B%E8%AE%B0/</loc>
+    
+    <lastmod>2023-01-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite-url/0102-0108%E5%A4%A7%E4%BA%8B%E8%AE%B0/</loc>
     
     <lastmod>2023-01-09</lastmod>
@@ -347,7 +354,7 @@
 
   <url>
     <loc>http://yoursite-url/</loc>
-    <lastmod>2023-01-09</lastmod>
+    <lastmod>2023-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -355,35 +362,35 @@
   
   <url>
     <loc>http://yoursite-url/tags/have-a-try/</loc>
-    <lastmod>2023-01-09</lastmod>
+    <lastmod>2023-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/test/</loc>
-    <lastmod>2023-01-09</lastmod>
+    <lastmod>2023-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/life/</loc>
-    <lastmod>2023-01-09</lastmod>
+    <lastmod>2023-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/reading/</loc>
-    <lastmod>2023-01-09</lastmod>
+    <lastmod>2023-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://yoursite-url/tags/thinking/</loc>
-    <lastmod>2023-01-09</lastmod>
+    <lastmod>2023-01-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
